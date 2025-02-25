@@ -8,3 +8,9 @@ let tasks = [];
 app.get('/', (req, res)=>{
     res.render('index', {tasks: tasks});
 });
+
+app.post('/add', (req, res)=>{
+    const newTask = req.body.task;
+    tasks.push(newTask);
+    res.redirect('/');
+})
