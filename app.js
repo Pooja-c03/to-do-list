@@ -14,3 +14,7 @@ app.post('/add', (req, res)=>{
     tasks.push(newTask);
     res.redirect('/');
 })
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
